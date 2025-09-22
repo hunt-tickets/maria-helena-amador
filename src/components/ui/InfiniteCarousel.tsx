@@ -24,13 +24,13 @@ const InfiniteCarousel = ({
         } as React.CSSProperties}
       >
         {/* Repetir la imagen múltiples veces para crear el efecto infinito */}
-        {Array.from({ length: 4 }).map((_, index) => (
+        {Array.from({ length: 2 }).map((_, index) => (
           <div
             key={index}
             className="flex-shrink-0 h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url("${imageUrl}")`,
-              width: '50%', // 4 elementos = 200% / 4 = 50% cada uno para que la imagen se vea full width
+              width: '100%', // 2 elementos = 200% / 2 = 100% cada uno - 1 segmento completo que se repite
             }}
           />
         ))}
