@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <InfiniteCarousel
-        imageUrl="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv"
+        imageUrl="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSKoryYL6zmKNpSJOQl7ZgujFW8GwC0MUB9qyD"
         height="80px"
         speed={25}
       />
