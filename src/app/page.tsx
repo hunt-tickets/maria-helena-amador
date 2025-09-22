@@ -10,12 +10,13 @@ export default function Home() {
   return (
     <Layout>
       <div
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pop-blue via-pop-pink to-pop-lime"
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'linear-gradient(135deg, #0066FF 0%, #FF6699 50%, #66FF00 100%)',
+          backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
         }}
       >
-        <div className="flex flex-col items-center text-center z-10 px-4">
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="flex flex-col items-center text-center z-10 px-4 relative">
           <h1 className="steelfish text-4xl md:text-6xl lg:text-8xl text-brutal-white text-outline mb-8 animate-fade-in">
             MARÍA HELENA
           </h1>
