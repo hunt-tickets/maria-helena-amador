@@ -5,6 +5,7 @@ interface CardProps {
   className?: string;
   variant?: 'default' | 'pop-blue' | 'pop-lime' | 'pop-yellow' | 'pop-pink';
   hover?: boolean;
+  onClick?: () => void;
 }
 
 const Card = ({
@@ -12,6 +13,7 @@ const Card = ({
   className = '',
   variant = 'default',
   hover = true,
+  onClick,
 }: CardProps) => {
   const baseClasses = 'border-4 border-brutal-black p-6 transition-all duration-200';
 
@@ -30,6 +32,7 @@ const Card = ({
   return (
     <div
       className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${className}`}
+      onClick={onClick}
     >
       {children}
     </div>
