@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
+import InfiniteCarousel from '@/components/ui/InfiniteCarousel';
 
 export default function Home() {
   const router = useRouter();
@@ -25,12 +26,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full hero-container"
-      style={{
-        backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-      }}
-    >
+    <>
+      <InfiniteCarousel
+        imageUrl="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv"
+        height="80px"
+        speed={25}
+      />
+      <div
+        className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full"
+        style={{
+          backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
+          height: 'calc(100vh - 80px)'
+        }}
+      >
         <div className="flex items-end justify-center px-4 py-safe relative w-full max-w-6xl h-full">
           <div className="grid grid-cols-2 gap-4 w-full max-w-lg animate-fade-in mb-8">
             <Button
@@ -51,6 +59,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-    </div>
+      </div>
+    </>
   );
 }

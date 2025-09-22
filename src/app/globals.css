@@ -70,3 +70,16 @@ body {
     min-height: -webkit-fill-available;
   }
 }
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll {
+  animation: scroll-horizontal var(--scroll-speed, 30s) linear infinite;
+}
