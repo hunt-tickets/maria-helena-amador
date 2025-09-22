@@ -14,15 +14,15 @@ const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'font-bold border-4 border-brutal-black transition-all duration-200 hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'font-bold border-4 border-black transition-all duration-200 hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variantClasses = {
-    primary: 'bg-brutal-white text-brutal-black brutalist-shadow hover:shadow-none',
-    secondary: 'bg-brutal-black text-brutal-white brutalist-shadow hover:shadow-none',
-    'pop-blue': 'bg-pop-blue text-brutal-white brutalist-shadow hover:shadow-none',
-    'pop-lime': 'bg-pop-lime text-brutal-black brutalist-shadow hover:shadow-none',
-    'pop-yellow': 'bg-pop-yellow text-brutal-black brutalist-shadow hover:shadow-none',
-    'pop-pink': 'bg-pop-pink text-brutal-white brutalist-shadow hover:shadow-none',
+    primary: 'bg-white text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
+    secondary: 'bg-black text-white shadow-[8px_8px_0px_#333] hover:shadow-none',
+    'pop-blue': 'bg-blue-600 text-white shadow-[8px_8px_0px_#000] hover:shadow-none',
+    'pop-lime': 'bg-lime-400 text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
+    'pop-yellow': 'bg-yellow-400 text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
+    'pop-pink': 'bg-pink-500 text-white shadow-[8px_8px_0px_#000] hover:shadow-none',
   };
 
   const sizeClasses = {

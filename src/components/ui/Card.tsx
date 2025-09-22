@@ -15,14 +15,14 @@ const Card = ({
   hover = true,
   onClick,
 }: CardProps) => {
-  const baseClasses = 'border-4 border-brutal-black p-6 transition-all duration-200';
+  const baseClasses = 'border-4 border-black p-6 transition-all duration-200';
 
   const variantClasses = {
-    default: 'bg-brutal-white brutalist-shadow',
-    'pop-blue': 'bg-pop-blue text-brutal-white brutalist-shadow',
-    'pop-lime': 'bg-pop-lime text-brutal-black brutalist-shadow',
-    'pop-yellow': 'bg-pop-yellow text-brutal-black brutalist-shadow',
-    'pop-pink': 'bg-pop-pink text-brutal-white brutalist-shadow',
+    default: 'bg-white shadow-[8px_8px_0px_#000]',
+    'pop-blue': 'bg-blue-600 text-white shadow-[8px_8px_0px_#000]',
+    'pop-lime': 'bg-lime-400 text-black shadow-[8px_8px_0px_#000]',
+    'pop-yellow': 'bg-yellow-400 text-black shadow-[8px_8px_0px_#000]',
+    'pop-pink': 'bg-pink-500 text-white shadow-[8px_8px_0px_#000]',
   };
 
   const hoverClasses = hover

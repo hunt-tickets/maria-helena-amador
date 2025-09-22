@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <Layout>
       <div
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pop-blue via-pop-pink to-pop-lime"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/hero-bg.jpg")',
+          backgroundImage: 'linear-gradient(135deg, #0066FF 0%, #FF6699 50%, #66FF00 100%)',
         }}
       >
         <div className="flex flex-col items-center text-center z-10 px-4">
