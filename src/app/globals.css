@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Steelfish:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.steelfish {
+  font-family: 'Steelfish', Arial Black, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brutalist-shadow {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.brutalist-shadow-pop {
+  box-shadow: 6px 6px 0px currentColor;
+}
+
+.text-outline {
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
