@@ -29,14 +29,14 @@ export default function Home() {
     <>
       <InfiniteCarousel
         imageUrl="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSKoryYL6zmKNpSJOQl7ZgujFW8GwC0MUB9qyD"
-        height="80px"
+        height="40px"
         speed={25}
       />
       <div
         className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-          height: 'calc(100vh - 80px)'
+          height: 'calc(100vh - 40px)'
         }}
       >
         <div className="flex items-end justify-center px-4 py-safe relative w-full max-w-6xl h-full">
