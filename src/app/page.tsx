@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Layout from '@/components/layout/Layout';
 import Button from '@/components/ui/Button';
 
 export default function Home() {
@@ -26,13 +25,12 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout>
-      <div
-        className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full hero-container"
-        style={{
-          backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-        }}
-      >
+    <div
+      className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full hero-container"
+      style={{
+        backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
+      }}
+    >
         <div className="flex items-end justify-center px-4 py-safe relative w-full max-w-6xl h-full">
           <div className="grid grid-cols-2 gap-4 w-full max-w-lg animate-fade-in mb-8">
             <Button
@@ -53,7 +51,6 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </div>
-    </Layout>
+    </div>
   );
 }

@@ -9,9 +9,9 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #__next {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-fill-available: 100%;
 }
 
