@@ -104,7 +104,7 @@ export default function Horarios() {
             {schedule.map((item, index) => (
               <Card
                 key={index}
-                variant={getTypeColor(item.type) as any}
+                variant={getTypeColor(item.type) as 'default' | 'pop-blue' | 'pop-lime' | 'pop-yellow' | 'pop-pink'}
                 className="p-6"
                 hover={false}
               >
