@@ -32,17 +32,21 @@ export default function Home() {
         </h1>
       </header>
       <div
-        className="relative bg-contain bg-top bg-no-repeat w-full bg-black"
+        className="relative bg-contain bg-top bg-no-repeat w-full"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
           height: '80vh',
-          minHeight: '600px'
+          minHeight: '600px',
+          backgroundColor: '#000000'
         }}
       >
       </div>
 
-      <section className="bg-black py-2 px-4">
+      <section className="py-8 px-4" style={{ backgroundColor: '#000000' }}>
         <div className="max-w-4xl mx-auto">
+          <h2 className="steelfish text-2xl md:text-3xl text-white text-center mb-8 font-bold">
+            NAVEGACIÓN
+          </h2>
           <div className="grid grid-cols-2 gap-6 items-stretch">
             <Button
               variant="pop-lime"
