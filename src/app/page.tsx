@@ -51,7 +51,7 @@ export default function Home() {
               variant="pop-lime"
               size="xl"
               onClick={() => router.push('/menu')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-dots"
             >
               EXPLORAR EVENTO
             </Button>
@@ -60,7 +60,7 @@ export default function Home() {
               variant="pop-pink"
               size="xl"
               onClick={() => window.open('https://hunttickets.com/maria-helena-amador', '_blank')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-stripes"
             >
               COMPRAR BOLETOS
             </Button>
@@ -69,7 +69,7 @@ export default function Home() {
               variant="pop-blue"
               size="xl"
               onClick={() => router.push('/horarios')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-grid"
             >
               HORARIOS
             </Button>
@@ -78,7 +78,7 @@ export default function Home() {
               variant="pop-yellow"
               size="xl"
               onClick={() => router.push('/ubicacion')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-waves"
             >
               UBICACIÓN
             </Button>
@@ -87,7 +87,7 @@ export default function Home() {
               variant="primary"
               size="xl"
               onClick={() => router.push('/comidas')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-zigzag"
             >
               COMIDAS
             </Button>
@@ -96,7 +96,7 @@ export default function Home() {
               variant="secondary"
               size="xl"
               onClick={() => router.push('/evento')}
-              className="animate-subtle-bounce"
+              className="animate-subtle-bounce pattern-cross"
             >
               EVENTO
             </Button>
