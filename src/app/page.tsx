@@ -33,7 +33,7 @@ export default function Home() {
         speed={25}
       />
       <div
-        className="relative flex items-center justify-center bg-cover bg-center bg-no-repeat w-full"
+        className="relative flex items-center justify-center bg-contain bg-center bg-no-repeat w-full bg-black"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
           height: 'calc(100vh - 30px)'
