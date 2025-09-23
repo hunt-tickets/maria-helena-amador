@@ -14,7 +14,7 @@ const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'font-bold border-0 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed h-full flex items-center justify-center';
+  const baseClasses = 'font-bold border-0 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center';
 
   const variantClasses = {
     primary: 'bg-white text-black hover:bg-gray-100',
@@ -26,10 +26,10 @@ const Button = ({
   };
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm min-h-[40px]',
-    md: 'px-6 py-3 text-base min-h-[48px]',
-    lg: 'px-8 py-4 text-lg min-h-[56px]',
-    xl: 'px-12 py-6 text-xl steelfish min-h-[80px]',
+    sm: 'px-4 py-2 text-sm h-[40px]',
+    md: 'px-6 py-3 text-base h-[48px]',
+    lg: 'px-8 py-4 text-lg h-[56px]',
+    xl: 'px-12 py-6 text-xl font-steelfish h-[80px]',
   };
 
   return (

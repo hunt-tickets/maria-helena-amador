@@ -27,27 +27,26 @@ export default function Home() {
   return (
     <>
       <header className="bg-black text-white py-4 px-4 text-center">
-        <h1 className="steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
+        <h1 className="font-steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
           MARÍA HELENA AMADOR
         </h1>
       </header>
       <div
-        className="relative bg-contain bg-top bg-no-repeat w-full"
+        className="relative bg-contain bg-top bg-no-repeat w-full bg-black"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
           height: '80vh',
-          minHeight: '600px',
-          backgroundColor: '#000000'
+          minHeight: '600px'
         }}
       >
       </div>
 
-      <section className="py-8 px-4" style={{ backgroundColor: '#000000' }}>
+      <section className="py-6 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="steelfish text-2xl md:text-3xl text-white text-center mb-8 font-bold">
+          <h2 className="font-steelfish text-2xl md:text-3xl text-white text-center mb-8 font-bold">
             NAVEGACIÓN
           </h2>
-          <div className="grid grid-cols-2 gap-6 items-stretch">
+          <div className="grid grid-cols-2 gap-6" style={{ gridAutoRows: '1fr' }}>
             <Button
               variant="pop-lime"
               size="xl"
