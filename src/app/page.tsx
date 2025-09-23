@@ -18,7 +18,6 @@ export default function Home() {
     // Handle scroll for header background
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log('Scroll position:', scrollPosition); // Debug log
       setIsScrolled(scrollPosition > 50);
     };
 
@@ -39,13 +38,9 @@ export default function Home() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 text-white py-4 px-4 text-center transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/80 header-blur shadow-lg'
+            ? 'bg-black/95 shadow-lg'
             : 'bg-transparent'
         }`}
-        style={{
-          backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-          WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none'
-        }}
       >
         <h1 className="font-steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
           MARÍA HELENA AMADOR
