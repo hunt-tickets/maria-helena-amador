@@ -32,7 +32,7 @@ export default function Home() {
         </h1>
       </header>
       <div
-        className="relative bg-contain bg-top bg-no-repeat w-full bg-black"
+        className="relative bg-cover md:bg-contain bg-center bg-no-repeat w-full bg-black"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
           paddingBottom: '56.25%' // 16:9 aspect ratio
