@@ -39,7 +39,7 @@ export default function Home() {
         }}
       >
         <div className="flex items-end justify-center px-4 py-safe relative w-full max-w-6xl h-full">
-          <div className="grid grid-cols-2 gap-4 w-full max-w-lg animate-fade-in mb-32">
+          <div className="grid grid-cols-2 gap-4 w-full max-w-lg animate-fade-in mb-16">
             <Button
               variant="pop-lime"
               size="xl"
