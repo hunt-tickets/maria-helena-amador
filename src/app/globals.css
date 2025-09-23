@@ -12,7 +12,7 @@
 
 html, body, #__next {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-fill-available: 100%;
   touch-action: manipulation;
   -webkit-text-size-adjust: 100%;

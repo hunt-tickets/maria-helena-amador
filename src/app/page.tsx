@@ -27,19 +27,23 @@ export default function Home() {
   return (
     <>
       <header className="bg-black text-white py-4 px-4 text-center">
-        <h1 className="steelfish text-2xl md:text-3xl lg:text-4xl font-bold">
+        <h1 className="steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
           MARÍA HELENA AMADOR
         </h1>
       </header>
       <div
-        className="relative flex items-center justify-center bg-contain bg-top bg-no-repeat w-full bg-black"
+        className="relative bg-contain bg-top bg-no-repeat w-full bg-black"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-          height: 'calc(100vh - 80px)'
+          height: '80vh',
+          minHeight: '600px'
         }}
       >
-        <div className="flex items-end justify-center px-4 py-safe relative w-full max-w-6xl h-full">
-          <div className="grid grid-cols-2 gap-4 w-full max-w-lg animate-fade-in mb-16">
+      </div>
+
+      <section className="bg-black py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Button
               variant="pop-lime"
               size="xl"
@@ -57,9 +61,45 @@ export default function Home() {
             >
               COMPRAR BOLETOS
             </Button>
+
+            <Button
+              variant="pop-blue"
+              size="xl"
+              onClick={() => router.push('/horarios')}
+              className="animate-subtle-bounce"
+            >
+              HORARIOS
+            </Button>
+
+            <Button
+              variant="pop-yellow"
+              size="xl"
+              onClick={() => router.push('/ubicacion')}
+              className="animate-subtle-bounce"
+            >
+              UBICACIÓN
+            </Button>
+
+            <Button
+              variant="primary"
+              size="xl"
+              onClick={() => router.push('/comidas')}
+              className="animate-subtle-bounce"
+            >
+              COMIDAS
+            </Button>
+
+            <Button
+              variant="secondary"
+              size="xl"
+              onClick={() => router.push('/evento')}
+              className="animate-subtle-bounce"
+            >
+              EVENTO
+            </Button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
