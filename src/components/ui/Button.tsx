@@ -26,10 +26,10 @@ const Button = ({
   };
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm h-[40px] w-[40px]',
-    md: 'px-6 py-3 text-base h-[48px] w-[48px]',
-    lg: 'px-8 py-4 text-lg h-[56px] w-[56px]',
-    xl: 'px-4 py-2 text-base font-steelfish h-[100px] w-[100px]',
+    sm: 'px-4 py-2 text-sm h-[40px] w-full',
+    md: 'px-6 py-3 text-base h-[48px] w-full',
+    lg: 'px-8 py-4 text-lg h-[56px] w-full',
+    xl: 'px-4 py-2 text-base font-steelfish w-full aspect-square',
   };
 
   return (
