@@ -14,15 +14,15 @@ const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'font-bold border-4 border-black transition-all duration-200 hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'font-bold border-0 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed rounded-lg';
 
   const variantClasses = {
-    primary: 'bg-white text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
-    secondary: 'bg-black text-white shadow-[8px_8px_0px_#333] hover:shadow-none',
-    'pop-blue': 'bg-blue-600 text-white shadow-[8px_8px_0px_#000] hover:shadow-none',
-    'pop-lime': 'bg-lime-400 text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
-    'pop-yellow': 'bg-yellow-400 text-black shadow-[8px_8px_0px_#000] hover:shadow-none',
-    'pop-pink': 'bg-pink-500 text-white shadow-[8px_8px_0px_#000] hover:shadow-none',
+    primary: 'bg-white text-black hover:bg-gray-100',
+    secondary: 'bg-black text-white hover:bg-gray-800',
+    'pop-blue': 'bg-blue-600 text-white hover:bg-blue-700',
+    'pop-lime': 'bg-lime-400 text-black hover:bg-lime-500',
+    'pop-yellow': 'bg-yellow-400 text-black hover:bg-yellow-500',
+    'pop-pink': 'bg-pink-500 text-white hover:bg-pink-600',
   };
 
   const sizeClasses = {
