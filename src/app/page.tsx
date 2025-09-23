@@ -41,9 +41,9 @@ export default function Home() {
       >
       </div>
 
-      <section className="bg-black py-12 px-4">
+      <section className="bg-black py-6 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             <Button
               variant="pop-lime"
               size="xl"
