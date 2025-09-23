@@ -155,3 +155,9 @@ body {
     repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 8px);
   animation: pattern-cross-pulse 2s linear infinite;
 }
+
+/* Header blur effect */
+.header-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

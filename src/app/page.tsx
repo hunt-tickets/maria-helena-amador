@@ -38,7 +38,7 @@ export default function Home() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 text-white py-4 px-4 text-center transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/80 backdrop-blur-md shadow-lg'
+            ? 'bg-black/80 header-blur shadow-lg'
             : 'bg-transparent'
         }`}
       >
