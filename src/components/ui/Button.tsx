@@ -14,7 +14,7 @@ const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'font-bold border-0 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'font-bold border-0 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed h-full flex items-center justify-center';
 
   const variantClasses = {
     primary: 'bg-white text-black hover:bg-gray-100',
