@@ -31,14 +31,11 @@ export default function Home() {
           MARÍA HELENA AMADOR
         </h1>
       </header>
-      <div
-        className="relative bg-cover md:bg-contain bg-center bg-no-repeat w-full bg-black"
-        style={{
-          backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-          paddingBottom: '56.25%' // 16:9 aspect ratio
-        }}
-      >
-      </div>
+      <img
+        src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv"
+        alt="María Helena Amador"
+        className="w-full h-auto block"
+      />
 
       <section className="py-6 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
