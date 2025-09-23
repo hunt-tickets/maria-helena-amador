@@ -35,8 +35,7 @@ export default function Home() {
         className="relative bg-contain bg-top bg-no-repeat w-full bg-black"
         style={{
           backgroundImage: 'url("https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv")',
-          height: '80vh',
-          minHeight: '600px'
+          paddingBottom: '56.25%' // 16:9 aspect ratio
         }}
       >
       </div>
