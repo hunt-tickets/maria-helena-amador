@@ -88,33 +88,70 @@ body {
   animation: scroll-horizontal var(--scroll-speed, 30s) linear infinite;
 }
 
-/* Patrones para botones */
+/* Patrones animados para botones */
+@keyframes pattern-dots-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 12px 12px; }
+}
+
 .pattern-dots {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.1) 2px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.15) 2px, transparent 2px);
   background-size: 12px 12px;
+  animation: pattern-dots-move 2s linear infinite;
+}
+
+@keyframes pattern-stripes-slide {
+  0% { background-position: 0 0; }
+  100% { background-position: 8px 8px; }
 }
 
 .pattern-stripes {
-  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 4px, transparent 4px, transparent 8px);
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 4px, transparent 4px, transparent 8px);
+  animation: pattern-stripes-slide 1.5s linear infinite;
+}
+
+@keyframes pattern-grid-shift {
+  0% { background-position: 0 0; }
+  100% { background-position: 10px 10px; }
 }
 
 .pattern-grid {
   background-image:
-    linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+    linear-gradient(rgba(0,0,0,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.15) 1px, transparent 1px);
   background-size: 10px 10px;
+  animation: pattern-grid-shift 3s linear infinite;
+}
+
+@keyframes pattern-waves-flow {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 6px; }
 }
 
 .pattern-waves {
-  background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 6px);
+  background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 2px, transparent 2px, transparent 6px);
+  animation: pattern-waves-flow 1s linear infinite;
+}
+
+@keyframes pattern-zigzag-bounce {
+  0% { background-position: 0 0; }
+  100% { background-position: 6px 6px; }
 }
 
 .pattern-zigzag {
-  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 3px, transparent 3px, transparent 6px);
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 3px, transparent 3px, transparent 6px);
+  animation: pattern-zigzag-bounce 2.5s linear infinite;
+}
+
+@keyframes pattern-cross-pulse {
+  0% { background-position: 0 0, 0 0; }
+  50% { background-position: 4px 0, 0 4px; }
+  100% { background-position: 8px 0, 0 8px; }
 }
 
 .pattern-cross {
   background-image:
-    repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 8px),
-    repeating-linear-gradient(90deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 8px);
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 8px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 8px);
+  animation: pattern-cross-pulse 2s linear infinite;
 }
