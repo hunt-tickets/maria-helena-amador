@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 
 export default function Home() {
   const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     // Set viewport height for mobile browsers
@@ -14,19 +15,33 @@ export default function Home() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
+    // Handle scroll for header background
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
     setViewportHeight();
     window.addEventListener('resize', setViewportHeight);
     window.addEventListener('orientationchange', setViewportHeight);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', setViewportHeight);
       window.removeEventListener('orientationchange', setViewportHeight);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <>
-      <header className="bg-black text-white py-4 px-4 text-center">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 text-white py-4 px-4 text-center transition-all duration-300 ${
+          isScrolled
+            ? 'bg-black/80 backdrop-blur-md shadow-lg'
+            : 'bg-transparent'
+        }`}
+      >
         <h1 className="font-steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
           MARÍA HELENA AMADOR
         </h1>
