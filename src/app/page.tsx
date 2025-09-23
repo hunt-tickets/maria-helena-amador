@@ -53,6 +53,7 @@ export default function Home() {
               variant="pop-pink"
               size="xl"
               onClick={() => window.open('https://hunttickets.com/maria-helena-amador', '_blank')}
+              className="animate-subtle-bounce"
             >
               COMPRAR BOLETOS
             </Button>
