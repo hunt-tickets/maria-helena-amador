@@ -1,123 +1,93 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Layout from '@/components/layout/Layout';
 import Button from '@/components/ui/Button';
 
 export default function Home() {
   const router = useRouter();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    // Set viewport height for mobile browsers
-    const setViewportHeight = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    // Handle scroll for header background
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
-    };
-
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
-    window.addEventListener('orientationchange', setViewportHeight);
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('resize', setViewportHeight);
-      window.removeEventListener('orientationchange', setViewportHeight);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 text-white py-4 px-4 text-center transition-all duration-300 ${
-          isScrolled
-            ? 'bg-black/60 header-blur shadow-lg'
-            : 'bg-transparent'
-        }`}
-        style={{
-          backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-          WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none'
-        }}
-      >
-        <h1 className="font-steelfish text-2xl md:text-3xl lg:text-4xl font-bold" style={{ lineHeight: '2.0' }}>
-          MARÍA HELENA AMADOR
-        </h1>
-      </header>
-      <img
-        src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv"
-        alt="María Helena Amador"
-        className="w-full h-auto block"
-      />
-
-      <section className="py-6 px-4 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-steelfish text-2xl md:text-3xl text-white text-center mb-8 font-bold">
-            NAVEGACIÓN
-          </h2>
-          <div className="grid grid-cols-2 gap-6" style={{ gridAutoRows: '1fr' }}>
-            <Button
-              variant="pop-lime"
-              size="xl"
-              onClick={() => router.push('/menu')}
-              className="animate-subtle-bounce pattern-dots"
-            >
-              EXPLORAR EVENTO
-            </Button>
-
-            <Button
-              variant="pop-pink"
-              size="xl"
-              onClick={() => window.open('https://hunttickets.com/maria-helena-amador', '_blank')}
-              className="animate-subtle-bounce pattern-stripes"
-            >
-              COMPRAR BOLETOS
-            </Button>
-
-            <Button
-              variant="pop-blue"
-              size="xl"
-              onClick={() => router.push('/horarios')}
-              className="animate-subtle-bounce pattern-grid"
-            >
-              HORARIOS
-            </Button>
-
-            <Button
-              variant="pop-yellow"
-              size="xl"
-              onClick={() => router.push('/ubicacion')}
-              className="animate-subtle-bounce pattern-waves"
-            >
-              UBICACIÓN
-            </Button>
-
-            <Button
-              variant="primary"
-              size="xl"
-              onClick={() => router.push('/comidas')}
-              className="animate-subtle-bounce pattern-zigzag"
-            >
-              COMIDAS
-            </Button>
-
-            <Button
-              variant="secondary"
-              size="xl"
-              onClick={() => router.push('/evento')}
-              className="animate-subtle-bounce pattern-cross"
-            >
-              EVENTO
-            </Button>
-          </div>
+    <Layout>
+      <div className="relative">
+        {/* Hero Image */}
+        <div className="relative">
+          <img
+            src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSba4DVhNwiCum51YLaTFe2QcNxB7SozkO6Ayv"
+            alt="María Helena Amador"
+            className="w-full h-auto block"
+            style={{
+              filter: 'brightness(1.1) contrast(1.05)',
+            }}
+          />
+          {/* Overlay gradient for better header visibility */}
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
         </div>
-      </section>
-    </>
+
+        {/* Navigation Section */}
+        <section className="py-6 px-4 bg-black">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-steelfish text-2xl md:text-3xl text-white text-center mb-8 font-bold">
+              NAVEGACIÓN
+            </h2>
+            <div className="grid grid-cols-2 gap-6" style={{ gridAutoRows: '1fr' }}>
+              <Button
+                variant="pop-lime"
+                size="xl"
+                onClick={() => router.push('/menu')}
+                className="animate-subtle-bounce pattern-dots"
+              >
+                EXPLORAR EVENTO
+              </Button>
+
+              <Button
+                variant="pop-pink"
+                size="xl"
+                onClick={() => window.open('https://hunttickets.com/maria-helena-amador', '_blank')}
+                className="animate-subtle-bounce pattern-stripes"
+              >
+                COMPRAR BOLETOS
+              </Button>
+
+              <Button
+                variant="pop-blue"
+                size="xl"
+                onClick={() => router.push('/horarios')}
+                className="animate-subtle-bounce pattern-grid"
+              >
+                HORARIOS
+              </Button>
+
+              <Button
+                variant="pop-yellow"
+                size="xl"
+                onClick={() => router.push('/ubicacion')}
+                className="animate-subtle-bounce pattern-waves"
+              >
+                UBICACIÓN
+              </Button>
+
+              <Button
+                variant="primary"
+                size="xl"
+                onClick={() => router.push('/comidas')}
+                className="animate-subtle-bounce pattern-zigzag"
+              >
+                COMIDAS
+              </Button>
+
+              <Button
+                variant="secondary"
+                size="xl"
+                onClick={() => router.push('/evento')}
+                className="animate-subtle-bounce pattern-cross"
+              >
+                EVENTO
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 }

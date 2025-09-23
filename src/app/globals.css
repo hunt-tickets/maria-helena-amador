@@ -156,8 +156,25 @@ body {
   animation: pattern-cross-pulse 2s linear infinite;
 }
 
-/* Header blur effect */
+/* Header blur effect - Enhanced for better browser support */
 .header-blur {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure backdrop-filter works properly */
+.blur-backdrop {
+  backdrop-filter: blur(20px) saturate(180%) brightness(110%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(110%);
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Force hardware acceleration for smooth transitions */
+.header-fixed {
+  will-change: backdrop-filter, background-color, border-color;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
